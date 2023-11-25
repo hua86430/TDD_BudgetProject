@@ -24,7 +24,7 @@ public class BudgetService
 
         while (tempStartDate <= end)
         {
-            var tempEndDate = new DateTime(tempStartDate.Year, tempStartDate.Month + 1, 1).AddDays(-1);
+            var tempEndDate = new DateTime(tempStartDate.Year, tempStartDate.Month , 1).AddMonths(1).AddDays(-1);
 
             if (tempEndDate > end)
                 tempEndDate = end;

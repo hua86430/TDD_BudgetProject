@@ -103,7 +103,70 @@ public class BudgetTests
 
         AmountShouldBe(amount, 120);
     }
+    [Test]
+    public void query_cross_month_with_one_month_no_budget()
+    {
+        GivenBudgetRepo(
+            new List<Budget.Models.Budget>()
+            {
+                new Budget.Models.Budget()
+                {
+                    YearMonth = "202309",
+                    Amount = 900
+                },
+                new Budget.Models.Budget()
+                {
+                    YearMonth = "202311",
+                    Amount = 600
+                }
+            });
 
+        var amount = QueryAmount(new DateTime(2023, 9, 30), new DateTime(2023, 11, 5));
+        AmountShouldBe(amount, 130);
+
+    }
+    
+    [Test]
+    public void leap_year()
+    {
+        GivenBudgetRepo(
+            new List<Budget.Models.Budget>()
+            {
+                new Budget.Models.Budget()
+                {
+                    YearMonth = "201602",
+                    Amount = 290
+                },
+            });
+
+        var amount = QueryAmount(new DateTime(2016, 2, 1), new DateTime(2016, 2, 1));
+        AmountShouldBe(amount, 10);
+
+    }
+    
+    [Test]
+    public void cross_year()
+    {
+        GivenBudgetRepo(
+            new List<Budget.Models.Budget>()
+            {
+                new Budget.Models.Budget()
+                {
+                    YearMonth = "202112",
+                    Amount = 620
+                },
+                new Budget.Models.Budget()
+                {
+                    YearMonth = "202201",
+                    Amount = 310
+                }
+            });
+
+        var amount = QueryAmount(new DateTime(2021, 12, 30), new DateTime(2022, 1, 5));
+        AmountShouldBe(amount, 90);
+
+    }
+ 
     private void GivenBudgetRepo(List<Budget.Models.Budget> budgets)
     {
         _budgetRepo.GetAll().Returns(budgets);
