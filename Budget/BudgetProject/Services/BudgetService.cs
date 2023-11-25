@@ -2,7 +2,7 @@
 
 namespace Budget.Services;
 
-public class BudgetService: IBudgetService
+public class BudgetService : IBudgetService
 {
     private readonly IBudgetRepo _budgetRepo;
 
@@ -20,26 +20,57 @@ public class BudgetService: IBudgetService
 
         var totalAmount = 0;
         var budgets = _budgetRepo.GetAll();
-        var tempStartDate = start;
 
-        while (tempStartDate <= end)
+        if (IsSameMonth(start, end))
         {
-            var tempEndDate = new DateTime(tempStartDate.Year, tempStartDate.Month , 1).AddMonths(1).AddDays(-1);
+            var queryDays = Math.Abs((start - end).Days) + 1;
 
-            if (tempEndDate > end)
-            {
-                tempEndDate = end;
-            }
+            var currentSameMonthAmount = budgets.FirstOrDefault(x => x.YearMonth == start.ToString("yyyyMM"))?.Amount ?? 0;
 
-            var queryDays = (tempEndDate - tempStartDate).Days + 1;
-            var monthAmount = budgets.FirstOrDefault(x => x.YearMonth == tempStartDate.ToString("yyyyMM"))?.Amount ?? 0;
+            totalAmount += currentSameMonthAmount / GetTotalFullMonthDaysByDateTime(start) * queryDays;
+        }
+        else
+        {
+            var startMonthAmount = GetAmountByDateTime(start, budgets) / GetTotalFullMonthDaysByDateTime(start) * GetDiffStartDays(start);
+            var endMonthAmount = GetAmountByDateTime(end, budgets) / GetTotalFullMonthDaysByDateTime(end) * end.Day;
 
-            var daysInMonth = DateTime.DaysInMonth(tempStartDate.Year, tempStartDate.Month);
-            totalAmount += monthAmount / daysInMonth * queryDays;
+            var inQueryRangeMonthAmount = budgets
+                .Where(budget => IsLessThenQueryMonth(start, budget) && IsMoreThenQueryMonth(end, budget))
+                .Sum(x => x.Amount);
 
-            tempStartDate = tempEndDate.AddDays(1);
+            totalAmount += startMonthAmount + endMonthAmount + inQueryRangeMonthAmount;
         }
 
         return totalAmount;
+    }
+
+    private static int GetAmountByDateTime(DateTime start, List<Models.Budget> budgets)
+    {
+        return budgets.FirstOrDefault(x => x.YearMonth == start.ToString("yyyyMM"))?.Amount ?? 0;
+    }
+
+    private static int GetDiffStartDays(DateTime start)
+    {
+        return Math.Abs(start.Day - DateTime.DaysInMonth(start.Year, start.Month)) + 1;
+    }
+
+    private static bool IsMoreThenQueryMonth(DateTime end, Models.Budget x)
+    {
+        return int.Parse(x.YearMonth) < int.Parse(end.ToString("yyyyMM"));
+    }
+
+    private static bool IsLessThenQueryMonth(DateTime start, Models.Budget x)
+    {
+        return int.Parse(start.ToString("yyyyMM")) < int.Parse(x.YearMonth);
+    }
+
+    private static int GetTotalFullMonthDaysByDateTime(DateTime start)
+    {
+        return DateTime.DaysInMonth(start.Year, start.Month);
+    }
+
+    private static bool IsSameMonth(DateTime start, DateTime end)
+    {
+        return start.ToString("yyyyMM") == end.ToString("yyyyMM");
     }
 }
