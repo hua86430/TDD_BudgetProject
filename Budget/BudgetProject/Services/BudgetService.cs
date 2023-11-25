@@ -18,6 +18,12 @@ public class BudgetService
             return 0;
         }
 
-        return _budgetRepo.GetAll().FirstOrDefault()?.Amount ?? 0;
+        var queryDays = (end-start).Days + 1;
+
+        var budgets = _budgetRepo.GetAll();
+        var amount = budgets.FirstOrDefault(x => x.YearMonth == start.ToString("yyyyMM"))?.Amount ?? 0;
+
+        var daysInMonth = DateTime.DaysInMonth(start.Year, start.Month);
+        return (amount / daysInMonth) * queryDays;
     }
 }
