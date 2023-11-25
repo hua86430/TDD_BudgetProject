@@ -45,6 +45,24 @@ public class BudgetTests
         AmountShouldBe(amount, 310);
     }
 
+    [Test]
+    public void invalid_date_time()
+    {
+        GivenBudgetRepo(
+            new List<Budget.Models.Budget>()
+            {
+                new Budget.Models.Budget()
+                {
+                    YearMonth = "202310",
+                    Amount = 310
+                }
+            });
+
+        var amount = QueryAmount(new DateTime(2023, 10, 31), new DateTime(2023, 10, 1));
+
+        AmountShouldBe(amount, 0);
+    }
+
     private void GivenBudgetRepo(List<Budget.Models.Budget> budgets)
     {
         _budgetRepo.GetAll().Returns(budgets);
