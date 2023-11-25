@@ -25,7 +25,7 @@ public class BudgetService : IBudgetService
         {
             var queryDays = Math.Abs((start - end).Days) + 1;
 
-            var currentSameMonthAmount = budgets.FirstOrDefault(x => x.YearMonth == start.ToString("yyyyMM"))?.Amount ?? 0;
+            var currentSameMonthAmount = GetAmountByDateTime(start, budgets);
 
             totalAmount += currentSameMonthAmount / GetTotalFullMonthDaysByDateTime(start) * queryDays;
         }
@@ -44,9 +44,9 @@ public class BudgetService : IBudgetService
         return totalAmount;
     }
 
-    private static int GetAmountByDateTime(DateTime start, List<Models.Budget> budgets)
+    private static int GetAmountByDateTime(DateTime conditionDateTime, List<Models.Budget> budgets)
     {
-        return budgets.FirstOrDefault(x => x.YearMonth == start.ToString("yyyyMM"))?.Amount ?? 0;
+        return budgets.FirstOrDefault(x => x.YearMonth == conditionDateTime.ToString("yyyyMM"))?.Amount ?? 0;
     }
 
     private static int GetDiffStartDays(DateTime start)
