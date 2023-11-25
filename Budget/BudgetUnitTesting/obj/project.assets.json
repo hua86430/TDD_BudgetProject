@@ -440,17 +440,17 @@
           }
         }
       },
-      "Budget/1.0.0": {
+      "BudgetProject/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "NSubstitute": "5.1.0"
         },
         "compile": {
-          "bin/placeholder/Budget.dll": {}
+          "bin/placeholder/BudgetProject.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Budget.dll": {}
+          "bin/placeholder/BudgetProject.dll": {}
         },
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
@@ -1123,15 +1123,15 @@
         "version.txt"
       ]
     },
-    "Budget/1.0.0": {
+    "BudgetProject/1.0.0": {
       "type": "project",
-      "path": "../Budget/Budget.csproj",
-      "msbuildProject": "../Budget/Budget.csproj"
+      "path": "../BudgetProject/BudgetProject.csproj",
+      "msbuildProject": "../BudgetProject/BudgetProject.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "Budget >= 1.0.0",
+      "BudgetProject >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 17.5.0",
       "NSubstitute >= 5.1.0",
       "NUnit >= 3.13.3",
@@ -1168,8 +1168,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\Training\\TDD_Budget\\Budget\\Budget\\Budget.csproj": {
-              "projectPath": "D:\\Training\\TDD_Budget\\Budget\\Budget\\Budget.csproj"
+            "D:\\Training\\TDD_Budget\\Budget\\BudgetProject\\BudgetProject.csproj": {
+              "projectPath": "D:\\Training\\TDD_Budget\\Budget\\BudgetProject\\BudgetProject.csproj"
             }
           }
         }

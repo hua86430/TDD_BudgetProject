@@ -148,11 +148,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Training\\TDD_Budget\\Budget\\Budget\\Budget.csproj",
-      "projectName": "Budget",
-      "projectPath": "D:\\Training\\TDD_Budget\\Budget\\Budget\\Budget.csproj",
+      "projectUniqueName": "D:\\Training\\TDD_Budget\\Budget\\BudgetProject\\BudgetProject.csproj",
+      "projectName": "BudgetProject",
+      "projectPath": "D:\\Training\\TDD_Budget\\Budget\\BudgetProject\\BudgetProject.csproj",
       "packagesPath": "C:\\Users\\jack.huang85\\.nuget\\packages\\",
-      "outputPath": "D:\\Training\\TDD_Budget\\Budget\\Budget\\obj\\",
+      "outputPath": "D:\\Training\\TDD_Budget\\Budget\\BudgetProject\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jack.huang85\\AppData\\Roaming\\NuGet\\NuGet.Config",

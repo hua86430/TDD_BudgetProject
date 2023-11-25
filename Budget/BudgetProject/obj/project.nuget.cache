@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jN6qgK5M79E6RIskd4m/4DX3cOlhVloNmJgxWXFaCuniXkUpTKmP2KSiKr0eLXWQeVahI5hyuBQiizavoxYwWA==",
+  "dgSpecHash": "Osx2N3bDII+Mm8XMLR+t+C+8wQzHO1S5x9Bqe8GPoXJOfpHbpw9Q7ANu9/Rfzbd72pC4T5o7XnHY4R5YRyXAZA==",
   "success": true,
-  "projectFilePath": "D:\\Training\\TDD_Budget\\Budget\\Budget\\Budget.csproj",
+  "projectFilePath": "D:\\Training\\TDD_Budget\\Budget\\BudgetProject\\BudgetProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jack.huang85\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\jack.huang85\\.nuget\\packages\\nsubstitute\\5.1.0\\nsubstitute.5.1.0.nupkg.sha512",

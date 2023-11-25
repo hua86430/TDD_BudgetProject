@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Budget", "Budget\Budget.csproj", "{AC4EDD37-5E01-4C78-8617-78608B43BB9F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BudgetProject", "BudgetProject\BudgetProject.csproj", "{AC4EDD37-5E01-4C78-8617-78608B43BB9F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BudgetUnitTesting", "BudgetUnitTesting\BudgetUnitTesting.csproj", "{A0B2C253-560F-4004-8683-F69118158032}"
 EndProject
