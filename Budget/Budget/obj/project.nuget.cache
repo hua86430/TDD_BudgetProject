@@ -1,9 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "ftbtffStn+lTdZ7i4lZNSE11wyUh1lxf6n5Z5wv+sc9ciOJZIR6CgiIrhjIiE0XVrFb3z4IzXc4yXRNCu8ln4Q==",
+  "dgSpecHash": "jN6qgK5M79E6RIskd4m/4DX3cOlhVloNmJgxWXFaCuniXkUpTKmP2KSiKr0eLXWQeVahI5hyuBQiizavoxYwWA==",
   "success": true,
   "projectFilePath": "D:\\Training\\TDD_Budget\\Budget\\Budget\\Budget.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\jack.huang85\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
+    "C:\\Users\\jack.huang85\\.nuget\\packages\\nsubstitute\\5.1.0\\nsubstitute.5.1.0.nupkg.sha512",
+    "C:\\Users\\jack.huang85\\.nuget\\packages\\system.diagnostics.eventlog\\6.0.0\\system.diagnostics.eventlog.6.0.0.nupkg.sha512"
+  ],
   "logs": [
     {
       "code": "NU1803",

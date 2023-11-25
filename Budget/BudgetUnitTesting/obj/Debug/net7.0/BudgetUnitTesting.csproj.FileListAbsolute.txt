@@ -105,3 +105,5 @@ D:\Training\TDD_Budget\Budget\BudgetUnitTesting\obj\Debug\net7.0\refint\BudgetUn
 D:\Training\TDD_Budget\Budget\BudgetUnitTesting\obj\Debug\net7.0\BudgetUnitTesting.pdb
 D:\Training\TDD_Budget\Budget\BudgetUnitTesting\obj\Debug\net7.0\BudgetUnitTesting.genruntimeconfig.cache
 D:\Training\TDD_Budget\Budget\BudgetUnitTesting\obj\Debug\net7.0\ref\BudgetUnitTesting.dll
+D:\Training\TDD_Budget\Budget\BudgetUnitTesting\bin\Debug\net7.0\Castle.Core.dll
+D:\Training\TDD_Budget\Budget\BudgetUnitTesting\bin\Debug\net7.0\NSubstitute.dll

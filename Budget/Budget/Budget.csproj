@@ -6,4 +6,8 @@
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="NSubstitute" Version="5.1.0" />
+    </ItemGroup>
+
 </Project>
