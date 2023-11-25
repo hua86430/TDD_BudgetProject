@@ -27,7 +27,9 @@ public class BudgetService: IBudgetService
             var tempEndDate = new DateTime(tempStartDate.Year, tempStartDate.Month , 1).AddMonths(1).AddDays(-1);
 
             if (tempEndDate > end)
+            {
                 tempEndDate = end;
+            }
 
             var queryDays = (tempEndDate - tempStartDate).Days + 1;
             var monthAmount = budgets.FirstOrDefault(x => x.YearMonth == tempStartDate.ToString("yyyyMM"))?.Amount ?? 0;
