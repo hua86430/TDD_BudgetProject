@@ -80,6 +80,29 @@ public class BudgetTests
 
         AmountShouldBe(amount, 10);
     }
+    
+    [Test]
+    public void query_cross_month()
+    {
+        GivenBudgetRepo(
+            new List<Budget.Models.Budget>()
+            {
+                new Budget.Models.Budget()
+                {
+                    YearMonth = "202310",
+                    Amount = 310
+                },
+                new Budget.Models.Budget()
+                {
+                    YearMonth = "202311",
+                    Amount = 600
+                }
+            });
+
+        var amount = QueryAmount(new DateTime(2023, 10, 30), new DateTime(2023, 11, 5));
+
+        AmountShouldBe(amount, 120);
+    }
 
     private void GivenBudgetRepo(List<Budget.Models.Budget> budgets)
     {
