@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "xcAGVBqQZe7V9YSdtrR2Ziwhc8Au4wReuF3ItKtGqaoez9YdQAKkSXM0STuSEN4RIpsx47jl86S+snspvRqnVQ==",
+  "dgSpecHash": "R4iYF1hRMzChuy1EiKhb4jsDVlE9eQzbD3uK3Qk7YvNMFa9mwRMwe99hVpFkgEOMzfAx1oRkE839qQxxvbYWFA==",
   "success": true,
   "projectFilePath": "D:\\Training\\TDD_Budget\\Budget\\BudgetUnitTesting\\BudgetUnitTesting.csproj",
   "expectedPackageFiles": [
@@ -16,10 +16,7 @@
     "C:\\Users\\jack.huang85\\.nuget\\packages\\nunit\\3.13.3\\nunit.3.13.3.nupkg.sha512",
     "C:\\Users\\jack.huang85\\.nuget\\packages\\nunit.analyzers\\3.6.1\\nunit.analyzers.3.6.1.nupkg.sha512",
     "C:\\Users\\jack.huang85\\.nuget\\packages\\nunit3testadapter\\4.4.2\\nunit3testadapter.4.4.2.nupkg.sha512",
-    "C:\\Users\\jack.huang85\\.nuget\\packages\\system.reflection.metadata\\1.6.0\\system.reflection.metadata.1.6.0.nupkg.sha512",
-    "C:\\Users\\jack.huang85\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.16\\microsoft.netcore.app.ref.6.0.16.nupkg.sha512",
-    "C:\\Users\\jack.huang85\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.16\\microsoft.windowsdesktop.app.ref.6.0.16.nupkg.sha512",
-    "C:\\Users\\jack.huang85\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.16\\microsoft.aspnetcore.app.ref.6.0.16.nupkg.sha512"
+    "C:\\Users\\jack.huang85\\.nuget\\packages\\system.reflection.metadata\\1.6.0\\system.reflection.metadata.1.6.0.nupkg.sha512"
   ],
   "logs": [
     {
