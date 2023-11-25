@@ -8,7 +8,7 @@ namespace BudgetUnitTesting;
 public class BudgetTests
 {
     private IBudgetRepo? _budgetRepo;
-    private BudgetService _budgetService;
+    private IBudgetService _budgetService;
 
     [SetUp]
     public void SetUp()

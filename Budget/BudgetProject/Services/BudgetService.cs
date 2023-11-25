@@ -2,7 +2,7 @@
 
 namespace Budget.Services;
 
-public class BudgetService
+public class BudgetService: IBudgetService
 {
     private readonly IBudgetRepo _budgetRepo;
 
